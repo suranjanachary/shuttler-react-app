@@ -9,7 +9,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Divider
 } from '@mui/material';
 import { 
   LocalShipping as LocalShippingIcon,

@@ -12,14 +12,9 @@ import {
   TextField,
   FormControlLabel,
   Checkbox,
-  Divider,
   List,
   ListItem,
   ListItemText,
-  Radio,
-  RadioGroup,
-  FormControl,
-  FormLabel
 } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +25,7 @@ const steps = ['Shipping address', 'Payment details', 'Review your order'];
 
 const CheckoutPage: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
-  const { items, totalItems, totalAmount } = useSelector((state: RootState) => state.cart);
+  const { items, totalAmount } = useSelector((state: RootState) => state.cart);
   const { isAuthenticated } = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
